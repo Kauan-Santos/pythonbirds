@@ -11,9 +11,15 @@ class Pessoa():
 if __name__ == '__main__':
     Kauan = Pessoa(nome_completo='Altieres Kauan dos Santos')
     Gessica = Pessoa(nome_completo='Gessica Dos Santos')
+    Dinael = Pessoa(nome_completo='Dinael dos Santos')
+    Dinael.cidade = 'Campo Limpo Paulista'
     Jose = Pessoa(Kauan, Gessica, nome_completo='José Vantuil dos Santos', idade=55)
     print(Pessoa.cumprimentar(Jose))
     print(f'Nome: {Jose.nome_completo}')
     print(f'Idade: {Jose.idade}')
     for filho in Jose.filhos:
         print(f'Filhos: {filho.nome_completo}')
+    print(Kauan.__dict__)
+    print(Dinael.__dict__)
+    del Dinael.cidade
+    print(Dinael.__dict__)
