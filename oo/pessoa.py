@@ -1,4 +1,7 @@
 class Pessoa():
+
+    olhos = 2
+
     def __init__(self, *filhos, nome_completo=None, idade=None):
         self.nome_completo = nome_completo
         self.idade = idade
@@ -23,3 +26,4 @@ if __name__ == '__main__':
     print(Dinael.__dict__)
     del Dinael.cidade
     print(Dinael.__dict__)
+    print(Dinael.olhos)
