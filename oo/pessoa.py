@@ -10,6 +10,14 @@ class Pessoa():
     def cumprimentar(self):
         return f'Olá {self.nome_completo}'
 
+    @staticmethod
+    def metodo_estatico():
+        return 42
+
+    @classmethod
+    def nome_e_atributos_de_classe(cls):
+        return f'{cls} - olhos {cls.olhos}'
+
 
 if __name__ == '__main__':
     Kauan = Pessoa(nome_completo='Altieres Kauan dos Santos')
@@ -27,3 +35,6 @@ if __name__ == '__main__':
     del Dinael.cidade
     print(Dinael.__dict__)
     print(Dinael.olhos)
+    print(Pessoa.metodo_estatico(), Jose.metodo_estatico())
+    print(Pessoa.nome_e_atributos_de_classe(), Jose.nome_e_atributos_de_classe())
+    
