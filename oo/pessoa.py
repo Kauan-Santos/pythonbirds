@@ -18,6 +18,8 @@ class Pessoa():
     def nome_e_atributos_de_classe(cls):
         return f'{cls} - olhos {cls.olhos}'
 
+class Homem(Pessoa):
+    pass
 
 if __name__ == '__main__':
     Kauan = Pessoa(nome_completo='Altieres Kauan dos Santos')
