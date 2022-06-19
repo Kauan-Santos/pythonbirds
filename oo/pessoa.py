@@ -19,10 +19,14 @@ class Pessoa():
         return f'{cls} - olhos {cls.olhos}'
 
 class Homem(Pessoa):
-    pass
+    def cumprimentar(self):
+        
+        cumprimentar_da_classe = super().cumprimentar()
+        return f'{cumprimentar_da_classe}. Aperto de mão'
+
 
 if __name__ == '__main__':
-    Kauan = Pessoa(nome_completo='Altieres Kauan dos Santos')
+    Kauan = Homem(nome_completo='Altieres Kauan dos Santos')
     Gessica = Pessoa(nome_completo='Gessica Dos Santos')
     Dinael = Pessoa(nome_completo='Dinael dos Santos')
     Dinael.cidade = 'Campo Limpo Paulista'
@@ -39,4 +43,5 @@ if __name__ == '__main__':
     print(Dinael.olhos)
     print(Pessoa.metodo_estatico(), Jose.metodo_estatico())
     print(Pessoa.nome_e_atributos_de_classe(), Jose.nome_e_atributos_de_classe())
-    
+    print(Kauan.cumprimentar())
+    print(Jose.cumprimentar())
